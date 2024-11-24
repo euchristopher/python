@@ -1,9 +1,6 @@
-<<<<<<< Updated upstream
-n = int(input('Digite um numero: '))
+n = int(input("Digite um numero: "))
 suce = n + 1
 ant = n - 1
 
-print(f'O Sucessor do numero {n} é {suce} e o antecessor é {ant}')
-=======
+print(f"O Sucessor do numero {n} é {suce} e o antecessor é {ant}")
 print("Hello, World!")
->>>>>>> Stashed changes

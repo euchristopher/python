@@ -1,4 +1,4 @@
-texto = input('Digite o nome da sua cidade: ')
+texto = input("Digite o nome da sua cidade: ")
 palavra = "Santo"
 
 if palavra == texto:

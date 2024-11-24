@@ -1,5 +1,5 @@
 # Solicitando salário
-salario = float(input('Digite o salário do funcionário: '))
+salario = float(input("Digite o salário do funcionário: "))
 
 # Aumento de 15% no salário
 aumento = salario * 0.15
@@ -8,4 +8,4 @@ aumento = salario * 0.15
 total = salario + aumento
 
 # Resultado
-print(f'O antigo salário era de {salario} e com o aumento de 15% ficou {total:.2f}.')
+print(f"O antigo salário era de {salario} e com o aumento de 15% ficou {total:.2f}.")

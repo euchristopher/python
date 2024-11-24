@@ -1,5 +1,5 @@
 import pygame  # type: ignore # Importa a biblioteca pygame
-import time    # Para aguardar o áudio terminar
+import time  # Para aguardar o áudio terminar
 
 # Inicializa o mixer do pygame
 pygame.mixer.init()
