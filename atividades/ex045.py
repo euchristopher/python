@@ -5,7 +5,6 @@ from time import sleep
 ITENS = ["Pedra", "Papel", "Tesoura"]
 DIVISOR = "-" * 35
 
-
 # Função para verificar quem venceu
 def jokenpo(computador, jogador):
     if computador == jogador:

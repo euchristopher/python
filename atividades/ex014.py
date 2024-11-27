@@ -1,4 +1,4 @@
-# Import de modúlos matemáticos
+# Import de módulos matemáticos
 import math
 
 # Solicitando ângulo
