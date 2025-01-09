@@ -1,0 +1,5 @@
+valores = list(range(1, 6))
+maior = max(valores)
+menor = min(valores)
+print(f'O maior valor é: {maior} e ele esta na posição {valores.index(maior)}')
+print(f'O menor valor é: {menor} e ele esta na posição {valores.index(menor)}')
