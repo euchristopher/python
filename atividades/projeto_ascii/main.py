@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 from PIL import Image
+import os
 
 # Define o conjunto de caracteres que representam os diferentes níveis de brilho
 ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]
@@ -47,12 +48,12 @@ def play_video_as_ascii(video_path, width=100):
         # Converte o quadro para ASCII
         ascii_frame = image_to_ascii(pil_image, new_width=width)
 
-        # Limpa a tela (isso pode ser diferente dependendo do terminal)
-        print("\033c", end="")  # Em alguns terminais, isso limpa a tela
+        # Limpa a tela de forma compatível com Windows e Linux/macOS
+        os.system("cls" if os.name == "nt" else "clear")
         print(ascii_frame)
 
     cap.release()
 
 if __name__ == "__main__":
-    video_path = "seu_video.mp4"  # Caminho do seu arquivo de vídeo
+    video_path = "video/calabreso.mp4"  # Caminho do seu arquivo de vídeo
     play_video_as_ascii(video_path)
