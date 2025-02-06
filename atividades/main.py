@@ -23,13 +23,19 @@ def moeda(preco=0, moeda="R$"):
 
 
 def resumo(preco=0, taxaA=10, taxaR=5):
-  divisor = '-' * 40
-  print(divisor)
-  print(f'RESUMO DO VALOR'.center(30))
-  print(divisor)
-  print(f'Preço analisado: \t{moeda(preco)}')
-  print(f'Preço analisado: \t{dobro(preco, True)}')
-  print(f'Preço analisado: \t{metade(preco, True)}')
-  print(f'Com {taxaA}% de aumento: \t{aumentar(preco, taxaA, True)}')
-  print(f'Com {taxaR}% de redução: \t{diminuir(preco, taxaR, True)}')
-  print(divisor)
+    divisor = "-" * 40
+    print(divisor)
+    print(f"RESUMO DO VALOR".center(30))
+    print(divisor)
+    print(f"Preço analisado: \t{moeda(preco)}")
+    print(f"Preço analisado: \t{dobro(preco, True)}")
+    print(f"Preço analisado: \t{metade(preco, True)}")
+    print(f"Com {taxaA}% de aumento: \t{aumentar(preco, taxaA, True)}")
+    print(f"Com {taxaR}% de redução: \t{diminuir(preco, taxaR, True)}")
+    print(divisor)
+
+
+from atividades.ex111.utilidades import moeda
+
+p = float(input("Digite um valor: "))
+moeda.resumo(p)
