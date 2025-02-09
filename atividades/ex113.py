@@ -28,5 +28,7 @@ def leiaFloat(num):
             return n
 
 
-num = leiaInt("Digite um valor: ")
-print(f"Valor digitado: {num}")
+num1 = leiaInt("Digite um valor INTEIRO: ")
+num2 = leiaFloat("Digite um valor REAL: ")
+print(f"Valor INTEIRO digitado: {num1}")
+print(f"Valor REAL digitado: {num2}")
