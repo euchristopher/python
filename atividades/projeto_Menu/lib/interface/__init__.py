@@ -1,3 +1,17 @@
+def leiaInt(msg):
+    while True:
+        try:
+            n = int(input(msg))
+        except (ValueError, TypeError):
+            print("[ERROR]: Por favor, digite um número válido.")
+            continue
+        except KeyboardInterrupt:
+            print("[ERROR]: O usuário preferiu não digitar esse número.")
+            return 0
+        else:
+            return n
+
+
 def linha(tam=42):
     return "-" * tam
 
@@ -12,6 +26,8 @@ def menu(lista):
     cabeçalho("MENU PRINCIPAL")
     c = 1
     for item in lista:
-        print(f"{c} - {item}")
+        print(f"\033[33m{c}\033[m - \033[34m{item}\033[m")
         c += 1
     print(linha())
+    opc = leiaInt("\033[32mSua Opção: \033[m")
+    return opc

@@ -4,10 +4,34 @@ from PIL import Image
 import os
 import time
 
-ASCII_CHARS = ["@", "#", "8", "&", "o", "=", "+", ";", ":", ",", ".", " ", "?", "%", "$", "S", "W", "B", "M", "H", "U"]
+ASCII_CHARS = [
+    "@",
+    "#",
+    "8",
+    "&",
+    "o",
+    "=",
+    "+",
+    ";",
+    ":",
+    ",",
+    ".",
+    " ",
+    "?",
+    "%",
+    "$",
+    "S",
+    "W",
+    "B",
+    "M",
+    "H",
+    "U",
+]
+
 
 def pixel_to_ascii(gray_value):
     return ASCII_CHARS[min(int(gray_value / 10), len(ASCII_CHARS) - 1)]
+
 
 def image_to_ascii(image, new_width=100):
     width, height = image.size
@@ -23,6 +47,7 @@ def image_to_ascii(image, new_width=100):
         ascii_str += "\n"
     return ascii_str
 
+
 def play_video_as_ascii(video_path, width=100, speed_factor=0.01):
     cap = cv2.VideoCapture(video_path)
     while cap.isOpened():
@@ -36,6 +61,7 @@ def play_video_as_ascii(video_path, width=100, speed_factor=0.01):
         print(ascii_frame)
         time.sleep(speed_factor)
     cap.release()
+
 
 if __name__ == "__main__":
     video_path = "video/calabreso.mp4"
